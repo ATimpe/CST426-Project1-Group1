@@ -23,7 +23,7 @@ public class GameController : GameElement
             app.model.currentPiece = "turn";
         }
 
-        if (Input.GetKeyDown("4")) {
+        if (Input.GetKeyDown("4") || Input.GetKeyDown("F")) {
             app.model.currentPiece = "4way";
         }
 
