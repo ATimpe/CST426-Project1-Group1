@@ -6,6 +6,7 @@ public class WaypointNavigator : MonoBehaviour
 {
     CharacterNavigationController controller;
     public Waypoint currentWaypoint;
+    float direction;
 
     private void Awake()
     {
