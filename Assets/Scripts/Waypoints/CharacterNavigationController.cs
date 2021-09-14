@@ -9,7 +9,7 @@ public class CharacterNavigationController : MonoBehaviour
     public float rotationSpeed = 120;
     public float stopDistance = 2f;
     public Vector3 destination;
-    public Animator animator;
+    //public Animator animator;
     public bool reachedDestination;
 
     private Vector3 lastPosition;
@@ -18,7 +18,7 @@ public class CharacterNavigationController : MonoBehaviour
     private void Awake()
     {
         movementSpeed = Random.Range(0.8f, 2f);
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,6 +28,7 @@ public class CharacterNavigationController : MonoBehaviour
         {
             Vector3 destinationDirection = destination - transform.position;
             destinationDirection.y = 0;
+            
             float destinationDistance = destinationDirection.magnitude;
 
             if(destinationDistance >= stopDistance)
@@ -49,8 +50,8 @@ public class CharacterNavigationController : MonoBehaviour
             var fwdDotProduct = Vector3.Dot(transform.forward, velocity);
             var rightDotProduct = Vector3.Dot(transform.right, velocity);
 
-            animator.SetFloat("Horizontal", rightDotProduct);
-            animator.SetFloat("Forward", fwdDotProduct);
+            //animator.SetFloat("Horizontal", rightDotProduct);
+            //animator.SetFloat("Forward", fwdDotProduct);
         }
 
         lastPosition = transform.position;

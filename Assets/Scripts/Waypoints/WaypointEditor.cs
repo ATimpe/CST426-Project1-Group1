@@ -3,6 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+/*
+ * This class controls the appearance of waypoints within the scene editor.
+ * 
+ * The colors signify the directions in which waypoints can travel to each other:
+ * 
+ * Green = waypoint A has a path to the next waypoint
+ * Red = waypoint A has a path to the previous waypoint
+ * Blue = waypoint A has a branch to a third or more waypoint
+ * 
+ * Spheres signify the center of each waypoint. 
+ * 
+ * White lines signify the width of each waypoint.
+ *  -   Objects travelling along the waypoints will try to head toward the center of each waypoint,
+ *      but increasing the width will result in looser turns.
+ */
 [InitializeOnLoad()]
 public class WaypointEditor
 {
@@ -40,6 +55,15 @@ public class WaypointEditor
             Vector3 offsetTo = waypoint.nextWaypoint.transform.right * -waypoint.nextWaypoint.width / 2f;
 
             Gizmos.DrawLine(waypoint.transform.position + offset, waypoint.nextWaypoint.transform.position + offsetTo);
+        }
+
+        if(waypoint.branches != null)
+        {
+            foreach(Waypoint branch in waypoint.branches)
+            {
+                Gizmos.color = Color.blue;
+                Gizmos.DrawLine(waypoint.transform.position, branch.transform.position);
+            }
         }
     }
 }
