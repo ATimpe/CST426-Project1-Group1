@@ -2,6 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * This class defines the basic waypoint system.
+ * 
+ * previousWaypoint = previous waypoint relative to the current waypoint
+ * nextWaypoint = next waypoint relative to the current waypoint
+ * 
+ * width = determines how loosely an object approaches the waypoint
+ * 
+ * branches = a list containing another set of waypoints, which can be branched to from any waypoint on
+ *              the current track
+ *              
+ * branchRatio = probability of an object on the current waypoint track to access the branch upon passing it
+ */
 public class Waypoint : MonoBehaviour
 {
     public Waypoint previousWaypoint;
