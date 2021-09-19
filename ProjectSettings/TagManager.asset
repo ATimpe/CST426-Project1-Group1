@@ -5,7 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - RedCube
+<<<<<<< Updated upstream
   - UI
+=======
+  - Green Car
+  - Car Destroyer
+>>>>>>> Stashed changes
   - GameApplication
   layers:
   - Default

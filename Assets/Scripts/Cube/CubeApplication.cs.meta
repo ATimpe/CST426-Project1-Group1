@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: b9cd75777eb7a42ef96e35d7b6133733
+=======
+<<<<<<< Updated upstream:Assets/Scripts/Cube/CubeModel.cs.meta
+guid: 9f56bda807b3d4996afd1381a7156af1
+=======
+guid: 6b17fee8ee5dc407396d004d0f572b50
+>>>>>>> Stashed changes:Assets/Scripts/Cube/CubeApplication.cs.meta
+>>>>>>> Stashed changes
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
