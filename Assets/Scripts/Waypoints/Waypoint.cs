@@ -30,9 +30,17 @@ public class Waypoint : MonoBehaviour
 
     public Vector3 GetPosition()
     {
-        Vector3 minBound = transform.position + transform.right * width / 2f;
-        Vector3 maxBound = transform.position - transform.right * width / 2f;
+        //Vector3 minBound = transform.position + transform.right * width / 2f;
+        //Vector3 maxBound = transform.position - transform.right * width / 2f;
 
-        return Vector3.Lerp(minBound, maxBound, Random.Range(0f, 1f));
+        //Vector3 minBound = transform.position + transform.right;
+        //Vector3 maxBound = transform.position - transform.right;
+
+        //return Vector3.Lerp(minBound, maxBound, Random.Range(0f, 1f));
+        //return Vector3.Lerp(minBound, maxBound, 1);
+
+        // the commented lines of code above control how tightly cars turn at waypoints
+        // use them if you want to change the turning radius (or introduce randomness when turning)
+        return transform.position;
     }
 }

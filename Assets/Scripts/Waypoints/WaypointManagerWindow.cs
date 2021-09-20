@@ -3,6 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+/*
+ * This class manages the buttons used for creating, deleting, and branching waypoints
+ * within the scene editor.
+ * 
+ * We can also use other classes to call the following functions from this one:
+ * 
+ * - CreateWaypoint(GameObject selectedObject)
+ * - RemoveWaypoint(Waypoint waypointToRemove)
+ * - 
+ * 
+ */
 public class WaypointManagerWindow : EditorWindow
 {
     [MenuItem("Tools/Waypoint Editor")]
@@ -67,6 +78,7 @@ public class WaypointManagerWindow : EditorWindow
         waypointObject.transform.SetParent(waypointRoot, false);
 
         Waypoint waypoint = waypointObject.GetComponent<Waypoint>();
+
         if(waypointRoot.childCount > 1)
         {
             waypoint.previousWaypoint = waypointRoot.GetChild(waypointRoot.childCount - 2).GetComponent<Waypoint>();
@@ -77,6 +89,16 @@ public class WaypointManagerWindow : EditorWindow
         }
 
         Selection.activeGameObject = waypoint.gameObject;
+    }
+
+    // this function creates a waypoint object as a child of the selected object
+    void CreateWaypoint(GameObject selectedObject)
+    {
+        GameObject waypointObject = new GameObject("Waypoint", typeof(Waypoint));
+        waypointObject.transform.SetParent(selectedObject.transform, false);
+
+        // add code here to set next and previous waypoints
+
     }
 
     void CreateWaypointBefore()
@@ -150,6 +172,21 @@ public class WaypointManagerWindow : EditorWindow
         DestroyImmediate(selectedWaypoint.gameObject);
     }
 
+    void RemoveWaypoint(Waypoint waypointToRemove)
+    {
+        if (waypointToRemove.nextWaypoint != null)
+        {
+            waypointToRemove.nextWaypoint.previousWaypoint = waypointToRemove.previousWaypoint;
+        }
+        if (waypointToRemove.previousWaypoint != null)
+        {
+            waypointToRemove.previousWaypoint.nextWaypoint = waypointToRemove.nextWaypoint;
+            Selection.activeGameObject = waypointToRemove.previousWaypoint.gameObject;
+        }
+
+        DestroyImmediate(waypointToRemove.gameObject);
+    }
+
     void CreateBranch()
     {
         GameObject waypointObject = new GameObject("Waypoint " + waypointRoot.childCount, typeof(Waypoint));
@@ -164,5 +201,16 @@ public class WaypointManagerWindow : EditorWindow
         waypoint.transform.forward = branchedFrom.transform.forward;
 
         Selection.activeGameObject = waypoint.gameObject;
+    }
+
+    void CreateBranch(GameObject selectedObject)
+    {
+        GameObject waypointObject = new GameObject("Waypoint", typeof(Waypoint));
+        waypointObject.transform.SetParent(selectedObject.transform, false);
+
+        Waypoint waypoint = waypointObject.GetComponent<Waypoint>();
+
+        // add code here to define branches created in-game
+
     }
 }
