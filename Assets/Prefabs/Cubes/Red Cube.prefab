@@ -13,11 +13,7 @@ GameObject:
   - component: {fileID: 7818061601363871970}
   - component: {fileID: 8512454053567734767}
   - component: {fileID: 5835529136518841219}
-<<<<<<< Updated upstream:Assets/Prefabs/Red Cube.prefab
-  - component: {fileID: -8594923881237405482}
-=======
   - component: {fileID: -8017832788495284816}
->>>>>>> Stashed changes:Assets/Prefabs/Cubes/Red Cube.prefab
   m_Layer: 0
   m_Name: Red Cube
   m_TagString: RedCube
@@ -115,11 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myPrefab: {fileID: 1529100304327620113, guid: 6530d5f8521020e439e6b07750ac4f05, type: 3}
   thisObject: {fileID: 0}
-<<<<<<< Updated upstream:Assets/Prefabs/Red Cube.prefab
---- !u!114 &-8594923881237405482
-=======
 --- !u!114 &-8017832788495284816
->>>>>>> Stashed changes:Assets/Prefabs/Cubes/Red Cube.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,15 +120,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5961400662381503952}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< Updated upstream:Assets/Prefabs/Red Cube.prefab
-  m_Script: {fileID: 11500000, guid: b9cd75777eb7a42ef96e35d7b6133733, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-=======
   m_Script: {fileID: 11500000, guid: 6b17fee8ee5dc407396d004d0f572b50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 0}
   view: {fileID: 0}
   controller: {fileID: 0}
->>>>>>> Stashed changes:Assets/Prefabs/Cubes/Red Cube.prefab
