@@ -42,7 +42,7 @@ public class CubePlacer : MonoBehaviour
     {
         var finalPosition = grid.GetNearestPointOnGrid(clickPoint);
         //GameObject.CreatePrimitive(PrimitiveType.Cube).transform.position = finalPosition;
-        GameObject newCube = Instantiate(myPrefab, transform.position = finalPosition, Quaternion.identity);
+        Instantiate(myPrefab, transform.position = finalPosition, Quaternion.identity);
         //GameObject.CreatePrimitive(PrimitiveType.Sphere).transform.position = nearPoint;
     }
 }
