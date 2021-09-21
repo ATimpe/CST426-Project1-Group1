@@ -9,7 +9,7 @@ public class GameController : GameElement
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("It's working!");
     }
 
     // Update is called once per frame

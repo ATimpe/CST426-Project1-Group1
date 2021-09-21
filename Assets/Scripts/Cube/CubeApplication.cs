@@ -17,7 +17,9 @@ public class CubeApplication : MonoBehaviour
     void Start()
     {
         // Sets the current type of cube the player is placing and writes the value into the model
-        //GameModel model_ = FindObjectOfType<GameApplication>().GetComponent<GameApplication>().model;
-        //string hello = model_.getCurrentPiece();
+        //model = CubeModel.CubeModel();
+        model = new CubeModel();
+
+        //model.roadType = FindObjectOfType<GameApplication>().GetComponent<GameApplication>().getCurrentPiece();
     }
 }
