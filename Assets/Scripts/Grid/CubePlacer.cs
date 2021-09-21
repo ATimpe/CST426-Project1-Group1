@@ -44,12 +44,5 @@ public class CubePlacer : MonoBehaviour
         //GameObject.CreatePrimitive(PrimitiveType.Cube).transform.position = finalPosition;
         GameObject newCube = Instantiate(myPrefab, transform.position = finalPosition, Quaternion.identity);
         //GameObject.CreatePrimitive(PrimitiveType.Sphere).transform.position = nearPoint;
-        
-        // Takes the current type of piece the game currently has you placing 
-        // and makes the object placed the same
-        newCube.GetComponent<CubeApplication>().model.roadType = GameObject.Find("GameApplication")
-                                                                    .GetComponent<GameApplication>()
-                                                                    .model
-                                                                    .currentPiece;
     }
 }
