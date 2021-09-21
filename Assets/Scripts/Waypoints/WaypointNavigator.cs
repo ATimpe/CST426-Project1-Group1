@@ -16,7 +16,11 @@ public class WaypointNavigator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        direction = Mathf.RoundToInt(Random.Range(0f, 1f));
+        // the following line was previously used to have cars start pointing to next or previous waypoint randomly
+        //direction = Mathf.RoundToInt(Random.Range(0f, 1f));
+
+        // make all cars start facing toward the next waypoint
+        direction = 0;
 
         controller.SetDestination(currentWaypoint.GetPosition());
     }
@@ -47,8 +51,11 @@ public class WaypointNavigator : MonoBehaviour
                     }
                     else
                     {
-                        currentWaypoint = currentWaypoint.previousWaypoint;
-                        direction = 1;
+                        //currentWaypoint = currentWaypoint.previousWaypoint;
+                        //direction = 1;
+
+                        // despawn cars once they reach the final waypoint
+                        Destroy(controller.gameObject);
                     }
                 }
                 else if (direction == 1)
