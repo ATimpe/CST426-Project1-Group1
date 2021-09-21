@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8881109845271004595}
   - component: {fileID: 3179145516388511507}
   - component: {fileID: 6243719355638291213}
-  - component: {fileID: -3682899955845938145}
+  - component: {fileID: 4808477335680713828}
   m_Layer: 0
   m_Name: Blue Cube
   m_TagString: Untagged
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myPrefab: {fileID: 1529100304327620113, guid: 6530d5f8521020e439e6b07750ac4f05, type: 3}
   thisObject: {fileID: 0}
---- !u!114 &-3682899955845938145
+--- !u!114 &4808477335680713828
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,10 +120,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3410785686332228648}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b17fee8ee5dc407396d004d0f572b50, type: 3}
+  m_Script: {fileID: 11500000, guid: b9cd75777eb7a42ef96e35d7b6133733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 0}
   view: {fileID: 0}
   controller: {fileID: 0}
-  gameapp: {fileID: -3871599160105614185, guid: 9250239385e8a4dfc8765fb2386f97b7, type: 3}
