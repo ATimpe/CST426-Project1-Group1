@@ -31,4 +31,13 @@ public class GameController : GameElement
             app.model.currentPiece = "roundabout";
         }
     }
+
+    public void onRotateRight(GameObject selectedobject)
+    {
+        selectedobject.transform.Rotate(0f, 45f, 0f);
+    }
+    public void onRotateLeft(GameObject selectedobject)
+    {
+        selectedobject.transform.Rotate(0f, -45f, 0f);
+    }
 }

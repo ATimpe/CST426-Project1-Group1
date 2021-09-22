@@ -8,6 +8,10 @@ public class GameView : GameElement
         notifying the controller when things happen in the game (level completed, colisions, ect.)
     */
 
+    //contains references to every view related to the app
+
+    public RotateUIView rotateUIView;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,4 +23,6 @@ public class GameView : GameElement
     {
         
     }
+
+
 }
