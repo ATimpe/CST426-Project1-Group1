@@ -22,10 +22,6 @@ public class GameController : GameElement
         app.model.currentPiece = pieceType;
     }
 
-    public void changePiece(string pieceType) {
-        app.model.currentPiece = pieceType;
-    }
-
 
 
 
