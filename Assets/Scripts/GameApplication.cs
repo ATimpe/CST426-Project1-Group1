@@ -22,7 +22,9 @@ public class GameApplication : MonoBehaviour
     // Use start to initilize the VMC
     void Start()
     {
-        controller = new GameController();
+        model = gameObject.AddComponent<GameModel>();
+        controller = gameObject.AddComponent<GameController>();
+        view = gameObject.AddComponent<GameView>();
     }
 
     public string getCurrentPiece() {
