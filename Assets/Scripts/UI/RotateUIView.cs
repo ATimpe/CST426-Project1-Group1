@@ -26,7 +26,6 @@ public class RotateUIView : GameView
         selectedObject = GameObject.FindWithTag("ClickedObject");
         selectedObject.tag = "Cube";
         app.controller.onPlace(gameObject);
-        Destroy(gameObject);
     }
 
 }
