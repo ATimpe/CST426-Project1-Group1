@@ -5,7 +5,6 @@ using UnityEngine;
 public class OnCubeClick : GameView
 {
 
-
     //Original code
     public GameObject myPrefab;
 
@@ -14,8 +13,6 @@ public class OnCubeClick : GameView
     public GameObject otherObject;
 
     private GameObject oldUI;
-
-    private UIScript uiScript;
 
     private Vector3 originalPosition;
 
