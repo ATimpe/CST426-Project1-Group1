@@ -22,7 +22,21 @@ public class GameView : GameElement
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown("s")) {
+            app.controller.changePiece("straight");
+        }
+
+        if (Input.GetKeyDown("t")) {
+            app.controller.changePiece("turn");
+        }
+
+        if (Input.GetKeyDown("4") || Input.GetKeyDown("f")) {
+            app.controller.changePiece("4way");
+        }
+
+        if (Input.GetKeyDown("r")) {
+            app.controller.changePiece("roundabout");
+        }
     }
 
 
