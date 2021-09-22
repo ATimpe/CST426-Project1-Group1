@@ -39,29 +39,58 @@ public class UIScript : MonoBehaviour
 
     private Vector3 cubeLocation;
 
+    private RotateUIView rotateView;
+
+    private GameObject madeObject;
+
     //upon clicking on MakeMyPrefab button
     public void OnMakeMyPrefab()
-    {   
+    {
+        myGameObject = GameObject.FindWithTag("ClickedObject");
+
         //destroy the original object
         //Not implemented!!
         Destroy(myGameObject);
 
         //make the myPrefab
-        Instantiate(myPrefab, cubeLocation, Quaternion.identity);
+        madeObject = (GameObject)Instantiate(myPrefab, cubeLocation, Quaternion.identity);
+
+        madeObject.tag = "ClickedObject";
 
         //destroy the ui
         Destroy(gameObject);
+
+        MakeRotateUI();
     }
 
     public void MakeRedCube()
     {
+
+        myGameObject = GameObject.FindWithTag("ClickedObject");
+
         Destroy(myGameObject);
 
         //make redcube
-        Instantiate(redCube, cubeLocation, Quaternion.identity);
+        madeObject = Instantiate(redCube, cubeLocation, Quaternion.identity);
+
+        madeObject.tag = "ClickedObject";
+
 
         //destroy the ui
         Destroy(gameObject);
+
+        MakeRotateUI();
+    }
+
+    public void clickedRotate()
+    {
+        Destroy(gameObject);
+        MakeRotateUI();
+    }
+
+    public void MakeRotateUI()
+    {
+        Instantiate(Resources.Load("RotateUI"), new Vector3(0, 0, 0), Quaternion.identity);
     }
 
     public void GetGameObject(GameObject newGameObject, Vector3 position)

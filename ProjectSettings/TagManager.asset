@@ -8,6 +8,8 @@ TagManager:
   - RedCube
   - Green Car
   - Car Destroyer
+  - ClickedObject
+  - Cube
   layers:
   - Default
   - TransparentFX

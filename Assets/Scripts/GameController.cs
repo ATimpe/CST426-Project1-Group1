@@ -21,4 +21,27 @@ public class GameController : GameElement
     public void changePiece(string pieceType) {
         app.model.currentPiece = pieceType;
     }
+
+    public void changePiece(string pieceType) {
+        app.model.currentPiece = pieceType;
+    }
+
+
+
+
+    //RotateUIView commands
+    public void onRotateRight(GameObject selectedobject)
+    {
+        selectedobject.transform.Rotate(0f, 90f, 0f);
+    }
+    public void onRotateLeft(GameObject selectedobject)
+    {
+        selectedobject.transform.Rotate(0f, -90f, 0f);
+    }
+    public void onPlace(GameObject rotateUI)
+    {
+        Destroy(rotateUI);
+    }
+
+    
 }
