@@ -11,6 +11,7 @@ public class GameView : GameElement
     //contains references to every view related to the app
 
     public RotateUIView rotateUIView;
+    public UIScript uiScript;
 
     // Start is called before the first frame update
     void Start()

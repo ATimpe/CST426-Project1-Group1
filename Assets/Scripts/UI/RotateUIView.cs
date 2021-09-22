@@ -10,14 +10,22 @@ public class RotateUIView : GameView
     //user clicks on rotate right button
     public void clickedRotateRight()
     {
+        selectedObject = GameObject.FindWithTag("ClickedObject");
         app.controller.onRotateRight(selectedObject);
     }
 
     //user clicks on rotate left button
     public void clickedRotateLeft()
     {
+        selectedObject = GameObject.FindWithTag("ClickedObject");
         app.controller.onRotateLeft(selectedObject);
     }
 
-    
+    public void clickedPlace()
+    {
+        selectedObject.tag = "Cube";
+        app.controller.onPlace(selectedObject);
+        Destroy(gameObject);
+    }
+
 }

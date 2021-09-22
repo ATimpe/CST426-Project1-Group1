@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnCubeClick : MonoBehaviour
+public class OnCubeClick : GameView
 {
 
 
@@ -10,6 +10,8 @@ public class OnCubeClick : MonoBehaviour
     public GameObject myPrefab;
 
     public GameObject thisObject;
+
+    public GameObject otherObject;
 
     private GameObject oldUI;
 
@@ -20,6 +22,12 @@ public class OnCubeClick : MonoBehaviour
     //When you click the cube, create the UI
     void OnMouseDown()
     {
+        //find if we previously clicked on a cube.
+        if (GameObject.FindWithTag("ClickedObject") != null)
+        {
+            otherObject = GameObject.FindWithTag("ClickedObject");
+        }
+
         //unnecessary
         thisObject = gameObject;
 
@@ -29,7 +37,8 @@ public class OnCubeClick : MonoBehaviour
 
         //grab the position of the cube
         originalPosition = thisObject.transform.position;
-            
+
+        thisObject.tag="ClickedObject";
 
         //Create the UI
         Instantiate(myPrefab, new Vector3(0, 0, 0), Quaternion.identity);
