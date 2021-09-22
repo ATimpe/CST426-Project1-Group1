@@ -9,26 +9,16 @@ public class GameController : GameElement
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("S")) {
-            app.model.currentPiece = "straight";
-        }
+        
+    }
 
-        if (Input.GetKeyDown("T")) {
-            app.model.currentPiece = "turn";
-        }
-
-        if (Input.GetKeyDown("4") || Input.GetKeyDown("F")) {
-            app.model.currentPiece = "4way";
-        }
-
-        if (Input.GetKeyDown("R")) {
-            app.model.currentPiece = "roundabout";
-        }
+    public void changePiece(string pieceType) {
+        app.model.currentPiece = pieceType;
     }
 }

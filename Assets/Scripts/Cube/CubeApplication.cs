@@ -16,8 +16,8 @@ public class CubeApplication : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Sets the current type of cube the player is placing and writes the value into the model
-        //GameModel model_ = FindObjectOfType<GameApplication>().GetComponent<GameApplication>().model;
-        //string hello = model_.getCurrentPiece();
+        model = gameObject.AddComponent<CubeModel>();
+        controller = gameObject.AddComponent<CubeController>();
+        view = gameObject.AddComponent<CubeView>();
     }
 }

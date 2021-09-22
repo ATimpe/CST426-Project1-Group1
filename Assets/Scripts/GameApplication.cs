@@ -22,6 +22,12 @@ public class GameApplication : MonoBehaviour
     // Use start to initilize the VMC
     void Start()
     {
-        
+        model = gameObject.AddComponent<GameModel>();
+        controller = gameObject.AddComponent<GameController>();
+        view = gameObject.AddComponent<GameView>();
+    }
+
+    public string getCurrentPiece() {
+        return model.currentPiece;
     }
 }
