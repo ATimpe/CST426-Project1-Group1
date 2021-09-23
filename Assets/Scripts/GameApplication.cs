@@ -22,6 +22,17 @@ public class GameApplication : MonoBehaviour
     // Use start to initilize the VMC
     void Start()
     {
-        
+        // Makes sure that there is only one GameApplication at a time
+        // If one already exists this one destrots itself
+        if (FindObjectsOfType<GameApplication>().Length > 1)
+            Destroy(gameObject);
+
+        model = gameObject.AddComponent<GameModel>();
+        controller = gameObject.AddComponent<GameController>();
+        view = gameObject.AddComponent<GameView>();
+    }
+
+    public string getCurrentPiece() {
+        return model.currentPiece;
     }
 }

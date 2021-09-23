@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1144744557914361758}
   m_Layer: 0
   m_Name: Red Cube
-  m_TagString: RedCube
+  m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,8 +109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7974b9d061e2e814399bbaadc9715daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotateUIView: {fileID: 0}
+  uiScript: {fileID: 0}
   myPrefab: {fileID: 1529100304327620113, guid: 6530d5f8521020e439e6b07750ac4f05, type: 3}
   thisObject: {fileID: 0}
+  otherObject: {fileID: 0}
 --- !u!114 &1144744557914361758
 MonoBehaviour:
   m_ObjectHideFlags: 0

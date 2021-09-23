@@ -19,9 +19,14 @@ public class CubePlacer : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            GameObject clickedobj = GameObject.FindWithTag("ClickedObject");
             if (EventSystem.current.IsPointerOverGameObject())
             {
                 //Do nothing as we clicked on UI
+            }
+            else if (clickedobj != null)
+            {
+                //Do nothing as an object has been clicked on and no more should be made.
             }
             else
             {

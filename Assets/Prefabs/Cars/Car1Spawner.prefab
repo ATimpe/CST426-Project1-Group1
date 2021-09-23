@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bd9ffce001a48a4195375b17fb9e9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car1: {fileID: 8244452800459517176, guid: 4b626d42c5ce05e4ab194e93de54335e, type: 3}
+  car1: {fileID: 7391141520131872163, guid: 127051ebf5dce004dba40a4fea688bdb, type: 3}
 --- !u!54 &8632717451703302779
 Rigidbody:
   m_ObjectHideFlags: 0

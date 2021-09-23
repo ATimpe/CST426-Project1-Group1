@@ -43,4 +43,9 @@ public class Waypoint : MonoBehaviour
         // use them if you want to change the turning radius (or introduce randomness when turning)
         return transform.position;
     }
+
+    public Waypoint GetFirstWaypoint()
+    {
+        return nextWaypoint;
+    }
 }
