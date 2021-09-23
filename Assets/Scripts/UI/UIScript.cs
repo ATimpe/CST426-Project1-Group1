@@ -57,6 +57,8 @@ public class UIScript : MonoBehaviour
 
         madeObject.tag = "ClickedObject";
 
+
+
         //destroy the ui
         Destroy(gameObject);
 
