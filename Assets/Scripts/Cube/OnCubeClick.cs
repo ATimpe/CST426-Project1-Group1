@@ -23,6 +23,7 @@ public class OnCubeClick : GameView
         if (GameObject.FindWithTag("ClickedObject") != null)
         {
             otherObject = GameObject.FindWithTag("ClickedObject");
+            otherObject.tag="Cube";
         }
 
         //unnecessary

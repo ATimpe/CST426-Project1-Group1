@@ -10,6 +10,9 @@ public class CubeController : CubeElement
         // Sets the current type of cube the player is placing and writes the value into the model
         app.model.roadType = FindObjectOfType<GameApplication>().GetComponent<GameApplication>().controller.app.model.currentPiece;
         app.model.rotation = FindObjectOfType<GameApplication>().GetComponent<GameApplication>().controller.app.model.rotation;
+        
+        //adds a waypoint on creation
+        app.controller.SetWaypoint(Resources.Load<GameObject>("Waypoint/Waypoint").GetComponent<Waypoint>());
         Debug.Log("New road type " + app.model.roadType + " at rotation " + app.model.rotation);
 
     }
@@ -18,5 +21,14 @@ public class CubeController : CubeElement
     void Update()
     {
 
+    }
+
+    public Waypoint GetWaypoint()
+    {
+        return app.model.waypoint;
+    }
+    public void SetWaypoint(Waypoint otherWaypoint)
+    {
+        app.model.waypoint = otherWaypoint;
     }
 }
