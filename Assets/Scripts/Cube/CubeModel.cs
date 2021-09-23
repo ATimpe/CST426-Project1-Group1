@@ -5,4 +5,5 @@ using UnityEngine;
 public class CubeModel : CubeElement
 {
     public string roadType;
+    public int rotation;
 }
