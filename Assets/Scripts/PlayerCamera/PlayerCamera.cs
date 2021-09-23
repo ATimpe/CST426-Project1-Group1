@@ -27,5 +27,11 @@ public class PlayerCamera : MonoBehaviour
 
         //velocity is Vector3
         rig.velocity = new Vector3(x, 0, z);
+
+
+        if(Input.GetKeyDown("escape"))
+        {
+            Instantiate(Resources.Load("UI/Menu"), new Vector3(0, 0, 0), Quaternion.identity);
+        }
     }
 }

@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/trafficTesting.unity
     guid: 6b210debca4ca394d9e9d56cf8591970
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TileSystem.unity
     guid: 99e5b14d6db741c4b92a8428de134a65
   m_configObjects: {}

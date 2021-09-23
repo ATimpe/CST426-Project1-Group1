@@ -90,7 +90,7 @@ public class UIScript : MonoBehaviour
 
     public void MakeRotateUI()
     {
-        Instantiate(Resources.Load("RotateUI"), new Vector3(0, 0, 0), Quaternion.identity);
+        Instantiate(Resources.Load("UI/RotateUI"), new Vector3(0, 0, 0), Quaternion.identity);
     }
 
     public void GetGameObject(GameObject newGameObject, Vector3 position)
