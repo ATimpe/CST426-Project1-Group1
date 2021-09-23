@@ -10,6 +10,7 @@ TagManager:
   - Car Destroyer
   - ClickedObject
   - Cube
+  - Waypoint
   layers:
   - Default
   - TransparentFX
