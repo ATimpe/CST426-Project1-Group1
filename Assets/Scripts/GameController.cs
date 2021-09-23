@@ -20,5 +20,11 @@ public class GameController : GameElement
 
     public void changePiece(string pieceType) {
         app.model.currentPiece = pieceType;
+        Debug.Log("piece now set to " + pieceType);
+    }
+
+    public void changeRotation(int rotation) {
+        app.model.rotation = rotation;
+        Debug.Log("rotation now at " + rotation);
     }
 }

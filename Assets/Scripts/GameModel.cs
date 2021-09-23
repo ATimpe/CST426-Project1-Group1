@@ -8,6 +8,7 @@ public class GameModel : GameElement
     public int gold;                   // money to spend to buy more pieces
     public int timeRemaining;          // the amount of time left in a level
     public string currentPiece;        // what the current type of road you currently have selected is
+    public int rotation;               // what rotation is the piece at
     public int straightPieces;         // amount of straight pieces remaining
     public int turnPieces;             // amount of turn pieces remaining
     public int fourPieces;             // amount of 4 way intersection pieces remaining

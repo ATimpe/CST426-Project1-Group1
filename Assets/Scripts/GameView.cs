@@ -32,5 +32,9 @@ public class GameView : GameElement
         if (Input.GetKeyDown("r")) {
             app.controller.changePiece("roundabout");
         }
+
+        if (Input.GetMouseButtonDown(1)) { // Right click
+            app.controller.changeRotation((app.model.rotation + 1) % 4); // Caps at 3 and goes back to 0 after
+        }
     }
 }
