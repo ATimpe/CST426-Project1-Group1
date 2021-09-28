@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7391141520131872188}
   m_Layer: 0
   m_Name: Car1
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,6 +61,7 @@ MonoBehaviour:
   movementSpeed: 1
   rotationSpeed: 120
   stopDistance: 0.5
+  startingHeight: 4.3
   destination: {x: 0, y: 0, z: 0}
   reachedDestination: 0
 --- !u!1001 &7391141519253434908

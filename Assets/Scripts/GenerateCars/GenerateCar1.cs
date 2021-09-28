@@ -5,6 +5,7 @@ using UnityEngine;
 public class GenerateCar1 : MonoBehaviour
 {
     public GameObject car1;
+    public GameObject roadList;
 
     //do time based
     private int framesPassed = 0;
@@ -13,6 +14,7 @@ public class GenerateCar1 : MonoBehaviour
     void Start()
     {
         //Instantiate(car1, transform.position, Quaternion.identity);
+        roadList = GameObject.Find("Roads");
     }
 
     // Update is called once per frame
@@ -34,9 +36,12 @@ public class GenerateCar1 : MonoBehaviour
         //frames
         framesPassed++;
 
-        if (framesPassed % 1200 == 0)
+        if (roadList.transform.childCount > 0)
         {
-            Instantiate(car1, transform.position, Quaternion.identity);
-        }
+            if (framesPassed % 300 == 0)
+            {
+                Instantiate(car1, transform.position, Quaternion.identity);
+            }
+        }    
     }
 }

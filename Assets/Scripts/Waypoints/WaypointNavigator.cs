@@ -22,9 +22,9 @@ public class WaypointNavigator : MonoBehaviour
         // make all cars start facing toward the next waypoint
         direction = 0;
 
-        GameObject waypoint0 = GameObject.Find("Waypoint 0");
+        GameObject firstWaypoint = GameObject.Find("Road 1");
 
-        currentWaypoint = waypoint0.GetComponent<Waypoint>();
+        currentWaypoint = firstWaypoint.GetComponent<Waypoint>();
 
         controller.SetDestination(currentWaypoint.GetPosition());
     }
