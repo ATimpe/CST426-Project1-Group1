@@ -10,6 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5882532604780579689}
   - component: {fileID: 3303136798543171966}
+  - component: {fileID: 719657145910465506}
+  - component: {fileID: 1420020034650862334}
+  - component: {fileID: 5551052576349167988}
+  - component: {fileID: 6528918996211141954}
   m_Layer: 0
   m_Name: Road-Straight
   m_TagString: Untagged
@@ -26,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5882532604780579688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.001, z: 1}
   m_Children:
   - {fileID: 5882532604096984128}
   m_Father: {fileID: 0}
@@ -49,6 +53,61 @@ MonoBehaviour:
   width: 1
   branches: []
   branchRatio: 0.5
+--- !u!114 &719657145910465506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5882532604780579688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87bf39589bc5e264ba7a14e7be7fe171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myGameObject: {fileID: 0}
+  myPrefab: {fileID: 0}
+  redCube: {fileID: 0}
+--- !u!114 &1420020034650862334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5882532604780579688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4450e65830eedf34990bd7605bba1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateUIView: {fileID: 0}
+  uiScript: {fileID: 0}
+  selectedObject: {fileID: 0}
+--- !u!114 &5551052576349167988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5882532604780579688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7902ea5ea279f2b4cbc34e2a9db45574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &6528918996211141954
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5882532604780579688}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &6078811761936049241
 PrefabInstance:
   m_ObjectHideFlags: 0
