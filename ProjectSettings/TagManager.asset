@@ -12,6 +12,7 @@ TagManager:
   - Cube
   - Waypoint
   - Car
+  - Road
   layers:
   - Default
   - TransparentFX
