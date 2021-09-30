@@ -28,8 +28,6 @@ public class GameController : GameElement
         app.model.rotation = rotation;
         Debug.Log("rotation now at " + rotation);
     }
-<<<<<<< Updated upstream
-=======
 
     public void buyPiece() {
         app.model.gold -= app.model.piece_price;
@@ -54,5 +52,4 @@ public class GameController : GameElement
     }
 
     
->>>>>>> Stashed changes
 }

@@ -8,6 +8,11 @@ public class GameView : GameElement
         notifying the controller when things happen in the game (level completed, colisions, ect.)
     */
 
+    //contains references to every view related to the app
+
+    public RotateUIView rotateUIView;
+    public UIScript uiScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,4 +42,6 @@ public class GameView : GameElement
             app.controller.changeRotation((app.model.rotation + 1) % 4); // Caps at 3 and goes back to 0 after
         }
     }
+
+
 }
