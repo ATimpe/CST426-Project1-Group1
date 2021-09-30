@@ -30,6 +30,7 @@ public class CubePlacer : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hitInfo))
                 {
+                    FindObjectOfType<GameApplication>().GetComponent<GameApplication>().controller.app.controller.buyPiece();
                     PlaceCubeNear(hitInfo.point);
                 }
             }

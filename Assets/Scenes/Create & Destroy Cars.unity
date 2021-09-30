@@ -302,6 +302,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6565200976367329920, guid: 10a7428e098c84cecb400c2873911b57, type: 3}
+      propertyPath: goldUI
+      value: 
+      objectReference: {fileID: 2572200145568380251, guid: 5220b0bf196224cdabb64a3f86953bd9, type: 3}
     - target: {fileID: 5704492275642715700, guid: 10a7428e098c84cecb400c2873911b57, type: 3}
       propertyPath: m_Name
       value: GameApplication

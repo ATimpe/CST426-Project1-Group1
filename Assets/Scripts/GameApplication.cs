@@ -18,6 +18,7 @@ public class GameApplication : MonoBehaviour
     public GameModel model;
     public GameView view;
     public GameController controller;
+    public GameObject goldUI;
 
     // Use start to initilize the VMC
     void Start()
@@ -30,6 +31,12 @@ public class GameApplication : MonoBehaviour
         model = gameObject.AddComponent<GameModel>();
         controller = gameObject.AddComponent<GameController>();
         view = gameObject.AddComponent<GameView>();
+
+        // Grabs the goldUI prefab and then Instantiates it
+        // model.goldUI = (GameObject)Resources.Load("prefabs/GoldUI", typeof(GameObject));
+        model.goldUI = Instantiate(goldUI, new Vector3(0, 0, 0), Quaternion.identity);
+        model.piece_price = 10;
+        model.gold = 1000;
     }
 
     public string getCurrentPiece() {
