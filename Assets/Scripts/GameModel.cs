@@ -6,6 +6,7 @@ public class GameModel : GameElement
 {
     // GameModel keeps the object data. Add variables for the game to keep track of.
     public int gold;                   // money to spend to buy more pieces
+    public int piece_price;            // how much each piece costs
     public int timeRemaining;          // the amount of time left in a level
     public string currentPiece;        // what the current type of road you currently have selected is
     public int rotation;               // what rotation is the piece at
@@ -14,4 +15,7 @@ public class GameModel : GameElement
     public int turnPieces;             // amount of turn pieces remaining
     public int fourPieces;             // amount of 4 way intersection pieces remaining
     public int roundPieces;            // amount of roundabout pieces remaining
+
+    // UI
+    public GameObject goldUI;          // object that displays amount of gold
 }

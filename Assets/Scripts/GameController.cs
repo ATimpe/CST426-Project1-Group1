@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameController : GameElement
 {
@@ -26,6 +27,11 @@ public class GameController : GameElement
     public void changeRotation(int rotation) {
         app.model.rotation = rotation;
         Debug.Log("rotation now at " + rotation);
+    }
+
+    public void buyPiece() {
+        app.model.gold -= app.model.piece_price;
+        app.model.goldUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = app.model.gold.ToString() + "G";
     }
 
 
