@@ -30,6 +30,10 @@ Command Pattern will be utilized to:
   Speed up or Slow down the pace of the game.
   Open Menu UI to save, exit the level, or close the game.
   Controls will be mouse and keyboard
+  
+Resource Source:
+  Flag used was from Zenva Unity Tutorial: Create your first 3D game in Unity
+    - https://academy.zenva.com/course/build-your-first-3d-game-in-unity/
 
 Timeline:
 August 27th: Get together decide on game
