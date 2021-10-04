@@ -7,9 +7,9 @@ public class CarDespawner : MonoBehaviour
     //if the car enters a destroy object or zone, destroy it
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Car"))
+        if(other.CompareTag("Finish"))
         {
-            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
 }
