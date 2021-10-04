@@ -21,6 +21,8 @@ public class EndFlag : MonoBehaviour
             if(numofcars == 0)
             {
                 Debug.Log("You Win!");
+
+                SceneManager.LoadScene(2);
             }
             
         }
